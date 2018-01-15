@@ -3,6 +3,8 @@
 import os
 import sys
 import argparse
+import subprocess
+import re
 
 parse = argparse.ArgumentParser(description='Use to Count File Line Count')
 
@@ -37,8 +39,21 @@ def find_all_target_files(InDir,bRescurse):
 
 find_all_target_files(curdir,True)
 
+total_lines = 0;
 for file in target_files:
-    print(file+" is target files")
+    # print(file+" is target files")
+    p = subprocess.Popen(['wc',file],stdout=subprocess.PIPE)
+    # print(p.stdout.readline())
+    # print(str(p.stdout.readline(),encoding='utf-8'))
+    matchObj=re.match(r'\s*([0-9]*)',str(p.stdout.readline(),encoding="utf-8"))
+    if matchObj:
+        # print("matchObj.group()",matchObj.group())
+        linecount=int(matchObj.group(1))
+        total_lines += linecount
+        print("fileName:%s,linecount:%d"%(file,linecount))
+    else:
+        print('No match!')
 
+print("total lines count:%d"%(total_lines))
 
 
