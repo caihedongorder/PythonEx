@@ -54,6 +54,6 @@ for file in target_files:
     else:
         print('No match!')
 
-print("total lines count:%d"%(total_lines))
+print("total lines count:%d,files:%d"%(total_lines,len(target_files)))
 
 
