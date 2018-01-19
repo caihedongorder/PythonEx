@@ -14,24 +14,33 @@ from gamemodule import application
 
 class GLRender(render.GLRenderBase):
     def __init__(self):
+        self.startTime = time.clock()
+        self.rotateSpeed = 90
         pass
     def OnDrawFunc(self,DeltaTime):
         glClear(GL_COLOR_BUFFER_BIT)
+        escapeTime = time.clock() - self.startTime
+        rotateAngle = self.rotateSpeed * escapeTime
+        rotateAngle = DeltaTime * self.rotateSpeed
+        print(rotateAngle)
         # glLoadIdentity()
+        glRotatef(rotateAngle,0,1,0)
         # glTranslatef(0.5,0,0)
         # glRotatef(135,0,1,0)
         # glutWireTeapot(0.5)
         # glutSolidTeapot(0.5)
-        glBegin(GL_QUADS)
+        glBegin(GL_TRIANGLES)
         # glVertex3f(-0.50,0.5,0)
         # glVertex3f(0.50,0.5,0)
         # glVertex3f(0.50,-0.5,0)
         # glVertex3f(-0.50,-0.5,0)
         # 逆时针
-        glVertex3f(-0.5,0.5,0)
-        glVertex3f(-0.5,-0.5,0)
+        glColor3f(1.0,0,0)
+        glVertex3f(0.0,0.5,0)
+        glColor3f(0.0,1.0,0)
         glVertex3f(0.5,-0.5,0)
-        glVertex3f(0.5,0.5,0)
+        glColor3f(0.0,0,1.0)
+        glVertex3f(-0.5,-0.5,0)
         glEnd()
         glFlush()
 

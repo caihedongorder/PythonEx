@@ -15,7 +15,7 @@ from gamemodule import application
 
 def OnKeyboardPress(inKey,x,y):
     print("inKey:%d,x:%d,y:%d",(inKey,x,y))
-    if inKey == b"q":
+    if inKey == b"q" or inKey == b"\x1b":
         sys.exit()
     elif inKey == b"\r":
         windows.ReCreateWindow()
