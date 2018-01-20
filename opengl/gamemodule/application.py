@@ -14,5 +14,6 @@ def Init(InGLRenderCreateFunc):
     keyboardevent.Init()
     render.Init(InGLRenderCreateFunc)
 
+
 def Loop():
     glutMainLoop()

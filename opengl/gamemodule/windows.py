@@ -13,7 +13,7 @@ windowID = -1
 
 def Init():
     global windowID
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
     glutInitWindowSize(400,400)
     windowID = glutCreateWindow(b"first")
     print("windowID:",windowID)

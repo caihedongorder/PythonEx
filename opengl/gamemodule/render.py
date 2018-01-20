@@ -26,6 +26,7 @@ def _OnDrawFunc():
 
 class GLRenderBase:
     def __init__(self):
+        glClearColor(0,0,0,0)
         pass
     def OnDrawFunc(self,DeltaTime):
         pass
