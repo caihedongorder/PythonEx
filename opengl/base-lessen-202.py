@@ -17,13 +17,12 @@ class GLRender(render.GLRenderBase):
         render.GLRenderBase.__init__(self)
         self.startTime = time.clock()
         self.rotateSpeed = 90
-        glMatrixMode(GL_MODELVIEW)
-        glLoadIdentity()
-        gluLookAt(0,0,10,0,0,0,0,1,0)
+        # glMatrixMode(GL_MODELVIEW)
+        # glLoadIdentity()
+        # gluLookAt(0,0,10,0,0,0,0,1,0)
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
-        gluPerspective(60,1,1,1000)
-        glTranslatef(-1,1,0)
+        glOrtho(0,application.winSize[0],0,application.winSize[1],-100,100)
 
     def OnDrawFunc(self,DeltaTime):
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
@@ -38,11 +37,11 @@ class GLRender(render.GLRenderBase):
         # glutWireTeapot(2)
         glBegin(GL_TRIANGLES)
         glColor3f(1,0,0)
-        glVertex3f(0,1,0)
+        glVertex3f(0,0,0)
         glColor3f(0,1,0)
-        glVertex3f(-1,-1,0)
+        glVertex3f(application.winSize[0],0,0)
         glColor3f(0,0,1)
-        glVertex3f(1,-1,0)
+        glVertex3f(application.winSize[0]*0.5,application.winSize[1],0)
         glEnd()
         glutSwapBuffers()
 

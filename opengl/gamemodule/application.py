@@ -8,6 +8,9 @@ from gamemodule import keyboardevent
 from gamemodule import windows
 from gamemodule import render
 
+
+winSize = [400,400]
+
 def Init(InGLRenderCreateFunc):
     glutInit()
     windows.Init()

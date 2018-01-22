@@ -3,6 +3,7 @@
 
 import sys
 import time
+import math
 
 from OpenGL.GL import *
 from OpenGL.GLU import *
@@ -17,13 +18,24 @@ class GLRender(render.GLRenderBase):
         render.GLRenderBase.__init__(self)
         self.startTime = time.clock()
         self.rotateSpeed = 90
-        glMatrixMode(GL_MODELVIEW)
-        glLoadIdentity()
-        gluLookAt(0,0,10,0,0,0,0,1,0)
+        # glMatrixMode(GL_MODELVIEW)
+        # glLoadIdentity()
+        # gluLookAt(0,0,10,0,0,0,0,1,0)
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
-        gluPerspective(60,1,1,1000)
-        glTranslatef(-1,1,0)
+        width = application.winSize[0]
+        height = application.winSize[1]
+        glOrtho(0,width,0,height,-100,100)
+        self.vertices = [
+                    0,height*0.5,0,
+                    0,0,0,
+                    width*0.5,height*0.5,0,
+                    width*0.5,0,0
+                ]
+
+        # print(self.vertices)
+        glEnableClientState(GL_VERTEX_ARRAY)
+
 
     def OnDrawFunc(self,DeltaTime):
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
@@ -31,19 +43,8 @@ class GLRender(render.GLRenderBase):
         rotateAngle = self.rotateSpeed * escapeTime
         rotateAngle = DeltaTime * self.rotateSpeed
         print(rotateAngle)
-        # glLoadIdentity()
-        # glRotatef(rotateAngle,0,1,0)
-        # glTranslatef(0.5,0,0)
-        # glRotatef(135,0,1,0)
-        # glutWireTeapot(2)
-        glBegin(GL_TRIANGLES)
-        glColor3f(1,0,0)
-        glVertex3f(0,1,0)
-        glColor3f(0,1,0)
-        glVertex3f(-1,-1,0)
-        glColor3f(0,0,1)
-        glVertex3f(1,-1,0)
-        glEnd()
+        glVertexPointer(3,GL_FLOAT,0,self.vertices)
+        glDrawArrays(GL_TRIANGLE_STRIP,0,int(len(self.vertices)/3))
         glutSwapBuffers()
 
 start = time.clock()

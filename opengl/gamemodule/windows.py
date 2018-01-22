@@ -14,7 +14,8 @@ windowID = -1
 def Init():
     global windowID
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
-    glutInitWindowSize(400,400)
+    from gamemodule import application
+    glutInitWindowSize(application.winSize[0],application.winSize[1])
     windowID = glutCreateWindow(b"first")
     print("windowID:",windowID)
 
