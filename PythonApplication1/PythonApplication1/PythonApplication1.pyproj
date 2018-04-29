@@ -5,8 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>45156c04-3974-46ed-9a8b-52d67a9c0a9f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>wxWidgetDemo02.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -37,9 +36,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo02.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="wxWidgetDemo1.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_ShowImage.py">

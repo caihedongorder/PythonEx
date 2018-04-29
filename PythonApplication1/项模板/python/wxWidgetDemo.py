@@ -1,4 +1,5 @@
-﻿	
+﻿
+import sys	
 import wx
 
 
@@ -8,10 +9,10 @@ class myFrame(wx.Frame):
     def __init__(self,**kwargs):
        
        #构造基类方法
-        super(myFrame, self).__init__(size = size , **kwargs)
+        super(myFrame, self).__init__(**kwargs)
 
 
-class wxWidgetDemo02App(wx.App):
+class $safeitemname$App(wx.App):
     
     #初始化
     def OnInit(self):
@@ -27,7 +28,7 @@ class wxWidgetDemo02App(wx.App):
 
 def main():
     #创建app 对象
-    app = wxWidgetDemo02App()
+    app = $safeitemname$App()
     #消息循环
     app.MainLoop()
 
