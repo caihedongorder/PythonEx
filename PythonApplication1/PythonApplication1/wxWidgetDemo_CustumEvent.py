@@ -23,7 +23,6 @@ EVT_TOW_BUTTON = wx.PyEventBinder( myEVT_TWO_BUTTON ,1)
 
 
 
-
 class myFrame(wx.Frame):
 
     def __init__(self,**kwargs):
@@ -37,6 +36,7 @@ class myFrame(wx.Frame):
 
         btn1 = wx.Button(self,label = "左按钮")
         btn2 = wx.Button(self,label = "右按钮",pos = (100,0))
+        
 
         self.Bind(wx.EVT_BUTTON,self.onClickLeftBtn,btn1)
         self.Bind(wx.EVT_BUTTON,self.onClickRightBtn,btn2)

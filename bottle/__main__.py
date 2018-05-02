@@ -3,6 +3,9 @@
 
 from bottle import route,run,template,get,post,request
 
+import bottle
+app = bottle.Bottle()
+
 @route('/hello')
 def hello():
     return 'Hello,World!'
