@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>45156c04-3974-46ed-9a8b-52d67a9c0a9f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>wxWidgetDemo_Ex01.py</StartupFile>
+    <StartupFile>wxWidgetDemo_Menu.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -46,6 +46,9 @@
     <Compile Include="wxWidgetDemo_Ex01.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_Menu.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo_ScreenShot.py">
       <SubType>Code</SubType>
     </Compile>
@@ -53,6 +56,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_SketchWindow.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_statusBar.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
