@@ -16,7 +16,7 @@ class TowButtonEvent(wx.CommandEvent):
     @clickCount.setter
     def clickCount(self,InClickCount):
         self.__clickCount = InClickCount
-
+        
 #创建事件绑定器
 myEVT_TWO_BUTTON = wx.NewEventType()
 EVT_TOW_BUTTON = wx.PyEventBinder( myEVT_TWO_BUTTON ,1)
