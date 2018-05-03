@@ -2,7 +2,8 @@
 # coding=utf-8
 
 
-import sys	
+import sys
+import unittest	
 import wx
 
 
@@ -23,6 +24,9 @@ class myFrame(wx.Frame):
             print(menuLabel)
             print(menuItems)
             menuBar.Append(self.createMenu(menuItems),menuLabel)
+                
+            
+            
 
     def createMenu(self,InMenuItems):
         menu = wx.Menu()
@@ -38,6 +42,9 @@ class myFrame(wx.Frame):
                 label,subMenuItems = item
                 subMenu = self.createMenu(subMenuItems)
                 menu.AppendMenu(wx.NewId(),label,subMenu)
+                
+                
+                
         return menu
 
     def menuData(self):
