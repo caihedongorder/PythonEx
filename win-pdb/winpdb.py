@@ -934,7 +934,8 @@ class CMenuBar:
 
         while parent.GetMenuItemCount() > 0:
             i = parent.FindItemByPosition(0)
-            parent.DeleteItem(i)
+            #parent.DeleteItem(i)
+            parent.Remove(i)
 
         
 
@@ -1623,7 +1624,7 @@ class CWinpdbWindow(wx.Frame, CMainWindow):
     #
     
     def OnFrameSelected(self, event):    
-        self.m_async_sm.set_frame_index(event.m_itemIndex)
+        self.m_async_sm.set_frame_index(event.GetIndex())
         
 
     def update_frame(self, event):
@@ -3242,7 +3243,7 @@ class CThreadsViewer(wx.Panel, CCaptionManager):
     def OnThreadSelected(self, event):                
         if self.m_suppress_recursion == 0:
             self.m_suppress_recursion += 1
-            index = event.m_itemIndex
+            index = event.GetIndex()
             tid = self.m_threads.GetItemData(index)
             self.m_select_command(tid)
         else:
@@ -3539,7 +3540,7 @@ class CNamespacePanel(wx.Panel, CJobs):
 
                              
     def get_expression_list(self):
-        if self.m_tree.GetCount() == 0:
+        if self.m_tree.Children[0].GetCount() == 0:
             return None
 
         item = self.m_tree.GetRootItem()
@@ -4126,7 +4127,7 @@ class CAttachDialog(wx.Dialog, CJobs):
         
 
     def OnItemSelected(self, event):
-        self.m_index = event.m_itemIndex
+        self.m_index = event.GetIndex()   
         self.m_ok.Enable()
 
         event.Skip()
@@ -4140,7 +4141,7 @@ class CAttachDialog(wx.Dialog, CJobs):
 
         
     def OnItemActivated(self, event):
-        self.m_index = event.m_itemIndex
+        self.m_index = event.GetIndex()
 
         self.EndModal(wx.ID_OK)
         
