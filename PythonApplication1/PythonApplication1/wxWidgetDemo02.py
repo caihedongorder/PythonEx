@@ -4,7 +4,8 @@ import sys
 
 
 class myFrame(wx.Frame):
-    pass
+    def __init__(self,*args,**kwargs):
+        wx.Frame.__init__(self,*args,**kwargs)
 
 class wxWidgetDemo02App(wx.App):
     
