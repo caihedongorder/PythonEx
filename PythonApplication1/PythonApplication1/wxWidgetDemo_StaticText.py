@@ -4,7 +4,8 @@
 
 import sys	
 import wx
-
+import wx.lib.stattext
+import os
 
 
 class myFrame(wx.Frame):
@@ -22,12 +23,28 @@ class myFrame(wx.Frame):
         tst2.SetBackgroundColour("black")
         tst2.SetForegroundColour("red")
         
-        tst3 = wx.StaticText(panel,label = "static text3",pos=(200,0),size=(100,100) )
+        tst3 = wx.StaticText(panel,label = "static text3",pos=(200,0),size=(100,100),style=wx.ST_NO_AUTORESIZE)
+        #tst3 = wx.StaticText(panel,label = "static text3",pos=(200,0),size=(100,100),style=wx.ALIGN_CENTER)
         tst3.SetBackgroundColour("black")
         tst3.SetForegroundColour("red")
 
         font = wx.Font(30,wx.FONTFAMILY_DEFAULT,wx.FONTSTYLE_NORMAL,wx.FONTWEIGHT_NORMAL)
         tst3.SetFont(font)
+
+        tst3.SetLabel("aaaaaaaaa")
+
+
+        #tst4 = wx.lib.stattext.GenStaticText(self,label="gen static text4")
+        #tst4 = wx.StaticText(panel,label = "static text4")
+        tst4 = wx.lib.stattext.GenStaticText(panel,label="gen static text4",pos=(0,100),size=(100,100),style=wx.ST_NO_AUTORESIZE)
+        tst4.SetBackgroundColour("black")
+        tst4.SetForegroundColour("red")
+
+        #换行显示
+        tst4.SetLabel("tst4tst4tst4\n换行\ntst4tst4tst4")
+        
+        
+
 
 
         

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>SurroundsWithStatement</SnippetType>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>wxFont</Title>
+      <Author>蔡和东</Author>
+      <Description>创建字体</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>wxFt</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>fontSize</ID>
+          <ToolTip>fontSize</ToolTip>
+          <Default>10</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>fontFamily</ID>
+          <ToolTip>fontFamily</ToolTip>
+          <Default>wx.FONTFAMILY_DEFAULT</Default>
+          <Function>
+          </Function>
+        </Literal>
+		<Literal Editable="true">
+          <ID>fontStyle</ID>
+          <ToolTip>fontStyle</ToolTip>
+          <Default>wx.FONTSTYLE_NORMAL</Default>
+          <Function>
+          </Function>
+        </Literal>
+		<Literal Editable="true">
+          <ID>fontWeight</ID>
+          <ToolTip>fontWeight</ToolTip>
+          <Default>wx.FONTWEIGHT_NORMAL</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+	  <Imports>
+        <Import>
+          <Namespace>wx</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="python" Delimiter="$"><![CDATA[wx.Font($fontSize$,$fontFamily$,$fontStyle$,$fontWeight$)$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

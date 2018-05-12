@@ -106,7 +106,7 @@ class SnippetHeader(object):
     def write(self,xmlDoc,xmdElement):
         SnippetTypesNode = DOMParserUtil.createElement(xmlDoc,"SnippetTypes",xmdElement)
         for SnippetType in self.SnippetTypes:
-            DOMParserUtil.createTagNode(xmlDoc,"SnippetType",SnippetType,xmdElement)
+            DOMParserUtil.createTagNode(xmlDoc,"SnippetType",SnippetType,SnippetTypesNode)
 
         DOMParserUtil.createTagNode(xmlDoc,"Title",self.title,xmdElement)
         DOMParserUtil.createTagNode(xmlDoc,"Author",self.author,xmdElement)

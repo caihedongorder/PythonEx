@@ -1,0 +1,18 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>wxWidgetDemo.py</DefaultName>
+    <Name>wxWidgetDemo</Name>
+    <Description>wxWidget App 简单框架</Description>
+    <ProjectType>Python</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon Package="{6dbd7c1e-1f1b-496d-ac7c-c55dae66c783}" ID="404" />
+	<CustomParameters>  
+		<CustomParameter Name="$color1$" Value="Red"/>  
+		<CustomParameter Name="$color2$" Value="Blue "/>  
+	</CustomParameters>  
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$.py" ReplaceParameters="true">wxWidgetDemo.py</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

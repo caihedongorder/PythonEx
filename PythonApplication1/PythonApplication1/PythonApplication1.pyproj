@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>45156c04-3974-46ed-9a8b-52d67a9c0a9f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SnippetSerialzer.py</StartupFile>
+    <StartupFile>WatchDir.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -13,7 +13,7 @@
     <Name>PythonApplication1</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>Global|PythonCore|2.7-32</InterpreterId>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,22 +40,64 @@
     <Compile Include="student.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WatchDir.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo02.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemoFileSelector.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_Button.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_ButtonChangeBGColor.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_Combox.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo_CustumEvent.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_DirDialog.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_Ex01.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_FileDialog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_FontDialog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_ImageBrowser.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_List.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_MDIFrame.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo_Menu.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_pullDownChoice.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_Radio.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo_ScreenShot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_Scroll.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_ShapedWindow.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_ShowImage.py">
@@ -64,15 +106,27 @@
     <Compile Include="wxWidgetDemo_SketchWindow.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_Slider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_Spin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="wxWidgetDemo_Splitter.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="wxWidgetDemo_StaticText.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wxWidgetDemo_statusBar.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="wxWidgetDemo_TextCtrl.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|2.7-32" />
+    <InterpreterReference Include="Global|PythonCore|2.7" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
