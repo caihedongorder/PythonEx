@@ -36,6 +36,8 @@ class GLRender(render.GLRenderBase):
         # glTranslatef(0.5,0,0)
         # glRotatef(135,0,1,0)
         # glutWireTeapot(2)
+        glMatrixMode(GL_MODELVIEW)
+        glRotatef(self.rotateSpeed*DeltaTime,0,1,0)
         glBegin(GL_TRIANGLES)
         glColor3f(1,0,0)
         glVertex3f(0,1,0)

@@ -16,6 +16,7 @@ class GLRender(render.GLRenderBase):
     def __init__(self):
         pass
     def OnDrawFunc(self,DeltaTime):
+        glColor3f(1.0,0,0)
         glClear(GL_COLOR_BUFFER_BIT)
         # glLoadIdentity()
         # glTranslatef(0.5,0,0)
@@ -28,8 +29,8 @@ class GLRender(render.GLRenderBase):
         # glVertex3f(0.50,-0.5,0)
         # glVertex3f(-0.50,-0.5,0)
         # 逆时针
-        glVertex3f(-0.5,0.5,0)
-        glVertex3f(-0.5,-0.5,0)
+        glVertex3f(-0.5*0.5,0.5,0)
+        glVertex3f(-0.5*0.5,-0.5,0)
         glVertex3f(0.5,-0.5,0)
         glVertex3f(0.5,0.5,0)
         glEnd()

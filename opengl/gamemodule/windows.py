@@ -11,12 +11,12 @@ from OpenGL.GLUT import *
 GIsFullScreen = False
 windowID = -1
 
-def Init():
+def Init( WindowTitle=None ):
     global windowID
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
     from gamemodule import application
     glutInitWindowSize(application.winSize[0],application.winSize[1])
-    windowID = glutCreateWindow(b"first")
+    windowID = glutCreateWindow( bytes(WindowTitle,encoding = 'utf-8') if WindowTitle else b'first')
     print("windowID:",windowID)
 
 def Uninit():

@@ -46,9 +46,6 @@ class GLRender(render.GLRenderBase):
         glutSwapBuffers()
 
 start = time.clock()
-
-
-
 application.Init(lambda : GLRender())
 application.Loop()
 

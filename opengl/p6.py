@@ -15,25 +15,20 @@ from gamemodule import application
 class GLRender(render.GLRenderBase):
     def __init__(self):
         render.GLRenderBase.__init__(self)
-        self.startTime = time.clock()
-        self.rotateSpeed = 90
+        self.rotateSpeed = 180
+
         glMatrixMode(GL_MODELVIEW)
         glLoadIdentity()
         gluLookAt(0,0,10,0,0,0,0,1,0)
+
         glMatrixMode(GL_PROJECTION)
         glLoadIdentity()
         gluPerspective(60,1,1,1000)
 
     def OnDrawFunc(self,DeltaTime):
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-        escapeTime = time.clock() - self.startTime
-        rotateAngle = self.rotateSpeed * escapeTime
-        rotateAngle = DeltaTime * self.rotateSpeed
-        print(rotateAngle)
-        # glLoadIdentity()
-        # glRotatef(rotateAngle,0,1,0)
-        # glTranslatef(0.5,0,0)
-        # glRotatef(135,0,1,0)
+        glMatrixMode(GL_MODELVIEW)
+        glRotatef(self.rotateSpeed * DeltaTime,0,1,0)
         glutWireTeapot(2)
         glutSwapBuffers()
 

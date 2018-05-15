@@ -9,6 +9,7 @@ from utils.ue4.uobject_util import ObjectUtil
 from utils.ue4.actor_util import ActorUtil
 from utils.ue4.component_util import ComponentUtil
 from utils.ue4.material_util import MaterialUtils
+from utils.common.math import Math
 
 
 #import rpdb2;
@@ -22,9 +23,9 @@ class $safeitemname$:
 
     # this is called on game start
     def begin_play(self):
-        print('Begin Play')
+        print('$safeitemname$ Begin Play')
     def end_play(self,reason):
-        print('End Play')
+        print('$safeitemname$ End Play')
         
     # this is called at every 'tick'    
     def tick(self, delta_time):
